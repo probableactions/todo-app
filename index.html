@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+<script defer src="main.bundle.js"></script></head>
+
+<body>
+    <container class="page-wrapper">
+        <header class="header">
+
+            <button class="button" id="btnToggleSidebar">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Menu</title>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Menu">
+                            <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24">
+                            </rect>
+                            <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                            </line>
+                            <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                            </line>
+                            <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                            </line>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+            <h2 id="taskCollectionTitle"></h2>
+
+            <button class="button" id="btnNewTask">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg id="addTaskIcon" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="Edit / Add_Plus_Circle">
+                        <path id="Vector"
+                            d="M8 12H12M12 12H16M12 12V16M12 12V8M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+            </button>
+        </header>
+        <main class="main-content">
+            <div class="project-container ">
+                <div class="task-filters">
+                    <ul id="listTaskFilters">
+                        <li class="filter-wrapper">
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5 4C4.44772 4 4 4.44772 4 5V12H9C9.55228 12 10 12.4477 10 13V13.1C10 14.1493 10.8507 15 11.9 15H12.1C13.1493 15 14 14.1493 14 13.1V13C14 12.4477 14.4477 12 15 12H20V5C20 4.44772 19.5523 4 19 4H5ZM20 14H15.8956C15.4893 15.72 13.9441 17 12.1 17H11.9C10.0559 17 8.51066 15.72 8.10436 14H4V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V14ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V13V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V13V5Z"
+                                    fill="currentColor" />
+                            </svg><a href="#inbox" class="task-filter" id="inboxFilter">Inbox</a>
+                        </li>
+                        <li class="filter-wrapper">
+                            <?xml version="1.0" encoding="utf-8"?>
+
+                            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+
+                                <g fill="currentColor" stroke-width=".82858px" color="currentColor">
+
+                                    <path
+                                        d="M8.04 10.471 2.938 7.953l2.085-1.03-.932-.46-3.017 1.49L8.04 11.39l6.965-3.437-3.017-1.49-.93.46 2.084 1.03z"
+                                        style="-inkscape-stroke:none"
+                                        transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)" />
+
+                                    <path
+                                        d="M8.04 13.448 2.938 10.93 5.023 9.9l-.932-.46-3.017 1.49 6.966 3.437 6.965-3.437-3.017-1.49-.93.46 2.084 1.03z"
+                                        style="-inkscape-stroke:none"
+                                        transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)" />
+
+                                    <path
+                                        d="M8.04 1.537 1.074 4.974 8.04 8.41l6.965-3.437zm0 .919 5.102 2.518L8.04 7.492 2.938 4.974z"
+                                        style="-inkscape-stroke:none"
+                                        transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)" />
+
+                                </g>
+
+                            </svg><a href="#all" class="task-filter" id="allTaskFilter">All Tasks</a>
+                        </li>
+                        <li class="filter-wrapper">
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48"
+                                    y="80" width="416" height="384" rx="48" />
+                                <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                    stroke-linecap="round" x1="128" y1="48" x2="128" y2="80" />
+                                <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                    stroke-linecap="round" x1="384" y1="48" x2="384" y2="80" />
+                                <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                    stroke-linecap="round" x="112" y="224" width="96" height="96" rx="13" />
+                                <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                    stroke-linecap="round" x1="464" y1="160" x2="48" y2="160" />
+                            </svg><a href="#today" class="task-filter" id="todayFilter">Today</a>
+                        </li>
+                        <li class="filter-wrapper">
+                            <?xml version="1.0" encoding="utf-8"?>
+
+                            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="Calendar / Calendar_Week">
+                                    <path id="Vector"
+                                        d="M4 8H20M4 8V16.8002C4 17.9203 4 18.4801 4.21799 18.9079C4.40973 19.2842 4.71547 19.5905 5.0918 19.7822C5.5192 20 6.07899 20 7.19691 20H16.8031C17.921 20 18.48 20 18.9074 19.7822C19.2837 19.5905 19.5905 19.2842 19.7822 18.9079C20 18.4805 20 17.9215 20 16.8036V8M4 8V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H8M20 8V7.19691C20 6.07899 20 5.5192 19.7822 5.0918C19.5905 4.71547 19.2837 4.40973 18.9074 4.21799C18.4796 4 17.9203 4 16.8002 4H16M8 4H16M8 4V2M16 4V2M16 12H8"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg><a href="#week" class="task-filter" id="weekFilter">This Week</a>
+                        </li>
+                        <li class="filter-wrapper">
+                            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="800px" height="800px" viewBox="0 -1.5 11 11" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                <title>done_mini [#1484]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs>
+
+                                </defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-304.000000, -366.000000)"
+                                        fill="currentColor">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <polygon id="done_mini-[#1484]"
+                                                points="259 207.6 252.2317 214 252.2306 213.999 252.2306 214 248 210 249.6918 208.4 252.2306 210.8 257.3082 206">
+
+                                            </polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg><a href="#completed" class="task-filter" id="completedFilter">Completed Tasks</a>
+                        </li>
+                    </ul>
+                </div>
+                <h2>Projects</h2>
+                <div class="project-form-wrapper">
+                    <form action="" method="GET" id="formProject">
+                        <fieldset class="fieldset">
+                            <input required id="projectName" name="projectName" type="text"
+                                placeholder="New project...">
+                        </fieldset>
+                    </form>
+                    <button type="submit" class="button" id="btnAddProject" form="formProject">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="currentColor" width="800px" height="800px" viewBox="0 0 1920 1920"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m764.386 112.941 225.882 338.824H225.882v112.94H1920v1072.942c0 93.402-76.01 169.412-169.412 169.412H169.412C76.009 1807.059 0 1731.049 0 1637.647V112.941h764.386ZM1040 858.846H880v240H640v160h240v240h160v-240h240v-160h-240v-240Z"
+                                fill-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <button type="submit" class="button hidden" id="btnEditProjectSubmit" form="formProject">
+                        <?xml version="1.0" encoding="utf-8"?>
+
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Edit / Edit_Pencil_Line_02">
+                                <path id="Vector"
+                                    d="M4 20.0001H20M4 20.0001V16.0001L14.8686 5.13146L14.8704 5.12976C15.2652 4.73488 15.463 4.53709 15.691 4.46301C15.8919 4.39775 16.1082 4.39775 16.3091 4.46301C16.5369 4.53704 16.7345 4.7346 17.1288 5.12892L18.8686 6.86872C19.2646 7.26474 19.4627 7.46284 19.5369 7.69117C19.6022 7.89201 19.6021 8.10835 19.5369 8.3092C19.4628 8.53736 19.265 8.73516 18.8695 9.13061L18.8686 9.13146L8 20.0001L4 20.0001Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        </svg>
+                    </button>
+
+                </div>
+
+                <ul class="project-list" id="listProjects">
+
+
+
+                </ul>
+            </div>
+            <div class="tasks-container">
+
+                <div class="task-collection" id="taskCollection">
+                </div>
+            </div>
+            <div class="module-form hidden" id="formModule">
+                <div class="module-header">
+                    <p class="module title"><span id="spanModuleTitle">Add</span> task</p>
+
+                    <button type="button" class=".button btn-close" id="btnCloseModule">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.4"
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                fill="currentColor" />
+                            <path
+                                d="M13.0594 12.0001L15.3594 9.70011C15.6494 9.41011 15.6494 8.93011 15.3594 8.64011C15.0694 8.35011 14.5894 8.35011 14.2994 8.64011L11.9994 10.9401L9.69937 8.64011C9.40937 8.35011 8.92937 8.35011 8.63938 8.64011C8.34938 8.93011 8.34938 9.41011 8.63938 9.70011L10.9394 12.0001L8.63938 14.3001C8.34938 14.5901 8.34938 15.0701 8.63938 15.3601C8.78938 15.5101 8.97937 15.5801 9.16937 15.5801C9.35937 15.5801 9.54937 15.5101 9.69937 15.3601L11.9994 13.0601L14.2994 15.3601C14.4494 15.5101 14.6394 15.5801 14.8294 15.5801C15.0194 15.5801 15.2094 15.5101 15.3594 15.3601C15.6494 15.0701 15.6494 14.5901 15.3594 14.3001L13.0594 12.0001Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+
+                <form action="" method="GET" id="formTask">
+                    <fieldset class="fieldset task-fieldset">
+                        <label for="taskTitle" class="form-control">Title
+                            <input required id="taskTitle" name="taskTitle" type="text"
+                                placeholder="What needs to be done?">
+                        </label>
+                        <label for="taskDescription" class="form-control">Description
+                            <textarea required id="taskDescription" name="taskDescription" rows="4"
+                                placeholder="Please enter any details... "></textarea>
+                        </label>
+                        <label for="taskPriority" class="form-control">Priority
+                            <select required id="taskPriority" name="taskPriority">
+                                <option value="">How important? (select one)</option>
+                                <option value="Low">Not important</option>
+                                <option value="Medium">Somewhat important</option>
+                                <option value="High">Very important</option>
+                            </select>
+                        </label>
+                        <label for="taskDueDate" class="form-control">Due Date
+                            <input required id="taskDueDate" name="taskDueDate" type="date"
+                                placeholder="When does it need to be completed?">
+                        </label>
+                        <label for="taskCompleted" class="form-control">Mark as finished
+                            <input id="taskCompleted" name="taskCompleted" type="checkbox">
+                        </label>
+                        <label for="taskProjectSelect" class="form-control">Project
+                            <select id="taskProjectSelect" name="taskProjectSelect">
+                                <option value="Inbox">Send to Inbox</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                </form>
+                <button type="submit" id="btnSubmitTask" form="formTask">Add Task</button>
+                <button class=hidden type="submit" id="btnSubmitUpdatedTask" form="formTask">Edit Task</button>
+                <button type="reset" id="btnResetForm" form="formTask">Clear</button>
+            </div>
+        </main>
+    </container>
+</body>
+
+</html>
